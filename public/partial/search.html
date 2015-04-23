@@ -1,0 +1,36 @@
+<div ng-hide="searchLoading">
+	<div ng-show="fileGroups.length > 0" >
+		<div ng-repeat="group in fileGroups| orderBy:['-values[0].active', 'values[0].host']"
+			 ng-init="gInfo = groupInfo(group, 'host')"
+			 ng-show="(group.values | extFilter:filter).length > 0"
+			 >
+			<span style='cursor: pointer;' class='group_header' data-ip="{{gInfo.header|int2ip}}" data-mleko-punchcard>
+				<a href='ftp://{{gInfo.header|int2ip}}'>{{gInfo.header|int2ip}}</a>
+				<img style='height: 14px;' src='/img/timecard.png' alt='punchcard'/>
+			</span>
+			<div class='group_content'>
+				<div class='element'
+					 ng-repeat='file in group.values| extFilter:filter| orderBy:["path", "name"]' ng-class-odd="'odd'"  ng-class="{'inactive': file.active === '0'}">
+
+					<span class='link'>
+						<a href='ftp://{{file.host|int2ip}}{{file.path}}'>ftp://{{file.host|int2ip}}{{file.path}}</a>
+						<a href='ftp://{{file.host|int2ip}}{{file.path}}{{file.name}}'>
+							<span class='bold'>{{file.name}}</span>
+						</a>
+					</span>
+					<span class='size'>{{file.size|fileSize}}</span>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style='text-align: center;' ng-show="!(fileGroups.length > 0)">
+		Nie znaleziono plików<br/>
+		<img src='/img/notfound.png' alt="notFound"/>
+	</div>
+</div>
+
+<div ng-show="searchLoading" class="align-center">
+	<img src='/img/fading-loader.svg' class="loading-img" alt='loading'/>
+</div>

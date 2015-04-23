@@ -1,0 +1,33 @@
+<div class='recent_search_box' data-mleko-ui-cycle="splash">
+	<div ng-if='doodle && doodle.name' data-mleko-ui-cycle-run="splash">
+		<span class='title'>{{doodle.description}}</span><br/>
+		<img height='300' ng-src='/img/doodle/{{doodle.file_id}}-{{doodle.name}}'/>
+	</div>
+
+	<div ng-if='1' data-mleko-ui-cycle-run="splash">
+		<span class='title'>Ostatnio znalezione</span><br/>
+		<div class='element' ng-repeat='search in recentSearch' ng-show="!recentSearchLoading">
+			<a href='/#search?text={{search.text|escapeUrl}}&amp;type={{search.type|escapeUrl}}'>
+				{{search.text}} - {{getByProperty(fileTypes, 'id', search.type)['name']}}
+			</a>
+			<br/>
+		</div>
+		<div ng-show="recentSearchLoading">
+			<img src='/img/fading-loader.svg' class="loading-img" alt='loading'/>
+		</div>
+
+	</div>
+
+	<div>
+		<span class='title'>Ostatnio dodane filmy</span><br/>
+		<div class='element' ng-repeat='movie in lastAdded' ng-show="!lastAddedLoading">
+			<a href='/#search?text={{movie.name|escapeUrl}}&amp;type=1'>
+				{{movie.name}} : {{movie.size|fileSize}}
+			</a>
+			<br/>
+		</div>
+		<div ng-show="lastAddedLoading">
+			<img src='/img/fading-loader.svg' class="loading-img" alt='loading'/>
+		</div>
+	</div>
+</div>

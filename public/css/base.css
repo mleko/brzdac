@@ -1,0 +1,225 @@
+body{
+    width: 95%;
+    padding: 20px;
+    border: 1px #eeeeee solid;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+.search_box{
+    text-align: center;
+}
+
+.search_box input, .search_box select{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #D0D0D0;
+    color: #222;
+    font-size: 16px;
+    margin: 2px;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.element a{
+    color: #333;
+}
+
+.group_content .inactive a{
+    color: #aaa;
+}
+
+.group_header{
+    font-weight: bold;
+}
+
+.group_header a{
+    color: #000;
+}
+
+.group_content{
+    font-size: 11px;
+    border-bottom: 1px black dashed;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+.group_content .size{
+    float: right;
+}
+
+.group_content .element{
+    padding: 2px;
+}
+
+.group_content .odd{
+    background-color: #def;
+}
+
+.recent_search_box{
+    text-align: center;
+    margin: auto;
+}
+
+.recent_search_box div{
+	margin: auto;
+}
+
+.recent_search_box .title{
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.recent_search_box .element{
+    color: darkslategray;
+    border-bottom: 1px #D0D0D0 dotted;
+    margin: 4px;
+}
+
+.footer{
+    margin-top: 10px;
+    width: 100%;
+    font-size: 10px;
+    color: #888;
+}
+
+.footer a{
+    font-size: 10px;
+    color: #888;
+}
+
+/* generic */
+.bold{
+    font-weight: bold;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clear{
+	clear: both;
+}
+
+/* */
+/* Default tooltip class name: .tooltip */
+.tooltip{
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 999;
+    display: none;
+	height: 310px;
+}
+
+.panel-mainmenu{
+	float:left;
+	width: 200px;
+	border: 1px #fafafa solid;
+	border-radius: 5px;
+}
+
+.panel-mainmenu ul{
+	list-style-type: none;
+	padding: 0px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.panel-mainmenu li{
+	background-color: #fafafa;
+	border: 1px #eee solid;
+	border-radius: 3px;
+	margin-bottom: 8px;
+	padding: 5px;
+	color: grey;
+}
+.panel-mainmenu li:hover,.panel .panel-main-menu a:hover{
+	background-color: #bbb;
+}
+.panel-mainmenu .active{
+	background-color: #eee;
+	font-weight: bold;
+}
+
+.panel-mainmenu a{
+	color: grey;
+	width: 100px;
+}
+
+.panel-content{
+	margin-left: 210px;
+	border: 1px #fafafa solid;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.panel-login{
+	border: 1px #fafafa solid;
+	border-radius: 5px;
+	margin: 20px;
+	text-align: center;
+	padding: 30px;
+}
+
+.panel-login form{
+
+}
+
+.panel #make-a-wish{
+	cursor: pointer;
+}
+
+.panel #wish-form{
+	display: none;
+}
+
+.panel div.wishes{
+	width: 100%;
+	margin-top: 10px;
+}
+
+.panel .wish-footer{
+	border-top: 1px gainsboro dotted;
+	font-size: 0.6em;
+}
+
+.panel .wish{
+	padding-bottom: 10px;
+	border: 1px gainsboro solid;
+	margin-bottom: 5px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.panel .wish a{
+	color: #000;
+}
+
+.align-left{
+	text-align: left;
+}
+.align-right{
+	text-align: right;
+}
+.align-center{
+	text-align: center;
+}
+
+.loading-img{
+	margin:auto;
+	min-height: 250px;
+}
+
+.modal-loading{
+	text-align: center;
+	z-index: 999;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	padding-top: 5%;
+	opacity: 0.8;
+}
